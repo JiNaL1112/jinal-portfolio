@@ -1,17 +1,6 @@
 import { skills, certifications } from '../data/portfolio';
 import styles from './Skills.module.css';
 
-const categoryColors: Record<string, string> = {
-  'Cloud Platforms': '#00D1FF',
-  'IaC & Provisioning': '#7B42FF',
-  'CI/CD & Automation': '#00FF94',
-  'Containers & Orchestration': '#F78166',
-  'Security & Compliance': '#FF7B72',
-  'Monitoring & Logging': '#FFA657',
-  'Scripting & Dev': '#A5D6FF',
-  'Databases': '#D2A8FF',
-};
-
 export default function Skills() {
   return (
     <section id="skills">
@@ -26,10 +15,7 @@ export default function Skills() {
           {Object.entries(skills).map(([category, items]) => (
             <div key={category} className={`card ${styles.card}`}>
               <div className={styles.cardHeader}>
-                <span
-                  className={styles.dot}
-                  style={{ background: categoryColors[category] ?? '#00D1FF' }}
-                />
+                <span className={styles.dot} />
                 <h3 className={styles.category}>{category}</h3>
               </div>
               <div className={styles.tags}>
@@ -48,14 +34,12 @@ export default function Skills() {
             {certifications.map(cert => (
               <div key={cert.name} className={`card ${styles.certCard}`}>
                 <div className={styles.certTop}>
-                  <span className={styles.certIcon} style={{ color: cert.color }}>{cert.icon}</span>
-                  <span className={styles.certCode} style={{ color: cert.color, borderColor: cert.color + '40', background: cert.color + '10' }}>
-                    {cert.name}
-                  </span>
+                  <span className={styles.certIcon}>{cert.icon}</span>
+                  <span className={styles.certCode}>{cert.name}</span>
                 </div>
                 <p className={styles.certFull}>{cert.full}</p>
                 <div className={styles.certBar}>
-                  <div className={styles.certBarFill} style={{ background: cert.color }} />
+                  <div className={styles.certBarFill} />
                 </div>
               </div>
             ))}

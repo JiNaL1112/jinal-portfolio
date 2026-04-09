@@ -1,6 +1,6 @@
 .footer {
   border-top: 1px solid var(--border);
-  padding: 48px 0 32px;
+  padding: 52px 0 36px;
   position: relative;
   z-index: 1;
 }
@@ -10,7 +10,7 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: 32px;
-  margin-bottom: 32px;
+  margin-bottom: 36px;
   flex-wrap: wrap;
 }
 
@@ -21,31 +21,33 @@
   font-family: var(--font-display);
   font-size: 1.1rem;
   font-weight: 800;
-  color: var(--text-primary);
-  margin-bottom: 8px;
+  color: var(--white);
+  margin-bottom: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .logoMono {
   font-family: var(--font-mono);
-  color: var(--cyan);
+  font-size: 0.85rem;
+  color: var(--blue);
 }
 
 .tagline {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: var(--text-muted);
-  max-width: 320px;
+  max-width: 300px;
+  letter-spacing: 0.03em;
 }
 
-.right {
-  text-align: right;
-}
+.right { text-align: right; }
 
 .copy {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: var(--text-muted);
-  margin-bottom: 8px;
+  margin-bottom: 9px;
 }
 
 .socials {
@@ -56,51 +58,50 @@
 }
 
 .social {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  color: var(--text-secondary);
+  font-family: var(--font-display);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--text-muted);
   text-decoration: none;
   transition: var(--transition);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
-.social:hover { color: var(--cyan); }
+.social:hover { color: var(--blue-bright); }
 
-.sep {
-  color: var(--text-muted);
-  font-size: 0.75rem;
-}
+.sep { color: var(--text-muted); font-size: 0.7rem; }
 
 .divider {
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--border), transparent);
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 .bottom {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: var(--text-muted);
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.mono {
-  color: var(--green);
-}
+.mono { color: var(--blue-dim); }
 
 .cursor {
   display: inline-block;
-  width: 8px;
-  height: 14px;
-  background: var(--cyan);
+  width: 7px;
+  height: 13px;
+  background: var(--blue);
   border-radius: 1px;
   animation: blink 1s step-end infinite;
   vertical-align: middle;
+  opacity: 0.7;
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
+  0%, 100% { opacity: 0.7; }
   50% { opacity: 0; }
 }
 

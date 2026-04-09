@@ -12,13 +12,14 @@ export const profile = {
   experience: "4+ Years",
 };
 
+
 export const certifications = [
-  { name: "CKA", full: "Certified Kubernetes Administrator", icon: "⎈", color: "#00D1FF" },
-  { name: "CKAD", full: "Certified Kubernetes Application Developer", icon: "⎈", color: "#00FF94" },
-  { name: "KCNA", full: "Kubernetes & Cloud Native Associate", icon: "☁", color: "#00D1FF" },
-  { name: "TF-003", full: "HashiCorp Terraform Associate (003)", icon: "◈", color: "#7B42FF" },
-  { name: "AZ-400", full: "Azure DevOps Engineer Expert", icon: "△", color: "#00BFFF" },
-  { name: "AZ-104", full: "Azure Administrator Associate", icon: "△", color: "#0078D4" },
+  { name: "CKA", full: "Certified Kubernetes Administrator", icon: "⎈", color: "#E8B84B" },
+  { name: "CKAD", full: "Certified Kubernetes Application Developer", icon: "⎈", color: "#FF8C42" },
+  { name: "KCNA", full: "Kubernetes & Cloud Native Associate", icon: "☁", color: "#E8B84B" },
+  { name: "TF-003", full: "HashiCorp Terraform Associate (003)", icon: "◈", color: "#A07E2E" },
+  { name: "AZ-400", full: "Azure DevOps Engineer Expert", icon: "△", color: "#E8B84B" },
+  { name: "AZ-104", full: "Azure Administrator Associate", icon: "△", color: "#FF8C42" },
 ];
 
 export const skills = {
