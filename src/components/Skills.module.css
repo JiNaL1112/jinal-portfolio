@@ -1,0 +1,129 @@
+.header {
+  margin-bottom: 48px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin-bottom: 64px;
+}
+
+.card {
+  padding: 24px;
+  transition: var(--transition);
+}
+
+.card:hover {
+  border-color: rgba(0,209,255,0.3);
+  box-shadow: var(--glow-cyan);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.category {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Certs */
+.certSection {
+  border-top: 1px solid var(--border);
+  padding-top: 48px;
+}
+
+.certGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.certCard {
+  padding: 24px;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.certCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--cyan), var(--green));
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.certCard:hover::before {
+  opacity: 1;
+}
+
+.certTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.certIcon {
+  font-size: 1.5rem;
+}
+
+.certCode {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid;
+}
+
+.certFull {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+.certBar {
+  height: 2px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.certBarFill {
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+  opacity: 0.5;
+}
+
+@media (max-width: 640px) {
+  .grid { grid-template-columns: 1fr; }
+  .certGrid { grid-template-columns: 1fr 1fr; }
+}

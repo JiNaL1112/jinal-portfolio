@@ -1,0 +1,148 @@
+.header { margin-bottom: 48px; }
+
+.intro {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  max-width: 560px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 28px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--cyan), var(--green));
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.card:hover {
+  border-color: rgba(0,255,148,0.3);
+  transform: translateX(4px);
+  box-shadow: var(--glow-green);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.number {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  width: 40px;
+  transition: var(--transition);
+  line-height: 1;
+}
+
+.card:hover .number {
+  color: var(--green);
+}
+
+.content {
+  flex: 1;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  line-height: 1.3;
+  transition: var(--transition);
+}
+
+.card:hover .title {
+  color: var(--green);
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.date {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.arrow {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.card:hover .arrow {
+  color: var(--green);
+  transform: translateX(4px);
+}
+
+.mediumCta {
+  text-align: center;
+}
+
+.mediumBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-hover);
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.mediumBtn:hover {
+  color: var(--green);
+  border-color: rgba(0,255,148,0.4);
+  background: rgba(0,255,148,0.05);
+}
+
+@media (max-width: 640px) {
+  .card { flex-wrap: wrap; gap: 12px; }
+  .number { width: auto; }
+  .arrow { display: none; }
+}
