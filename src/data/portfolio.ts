@@ -72,7 +72,7 @@ export const projects = [
     github: "https://github.com/JiNaL1112/Terraform-Azure-Project1",
     article: "https://medium.com/@jinalpatel11121999/building-a-scalable-azure-infrastructure-with-terraform-vmss-load-balancer-autoscaling-aed061a7f591",
     type: "Infrastructure",
-    image: "https://miro.medium.com/v2/resize:fit:1400/1*your-article-image.png",
+    image: "https://github.com/JiNaL1112/Terraform-Azure-Project1/blob/main/images/diagram-export-3-30-2026-6_58_35-PM.png?raw=true",
   },
   {
     title: "CloudOps Goal Tracker – Three-Tier Architecture",

@@ -1,18 +1,38 @@
+import { useState } from 'react';
 import { projects } from '../data/portfolio';
 import styles from './Projects.module.css';
 
+const filters = ['All', 'Infrastructure', 'Architecture', 'CI/CD', 'Kubernetes'];
+
 export default function Projects() {
+  const [activeFilter, setActiveFilter] = useState('All');
+  const filtered = activeFilter === 'All' ? projects : projects.filter(p => p.type === activeFilter);
+
   return (
     <section id="projects">
       <div className="container">
         <div className={styles.header}>
-          <p className="section-label">// featured_work</p>
-          <h2 className="section-title">Projects</h2>
-          <div className="glow-line" />
+          <p className={styles.headerLabel}>PROJECTS</p>
+          <h2 className={styles.headerTitle}>Featured Work</h2>
+          <p className={styles.headerSubtitle}>
+            Production-grade infrastructure projects on Azure &amp; AWS. Each repository includes
+            architecture decisions, IaC code, and CI/CD pipelines built for scale.
+          </p>
+          <div className={styles.filters}>
+            {filters.map(f => (
+              <button
+                key={f}
+                className={`${styles.filterBtn} ${activeFilter === f ? styles.filterActive : ''}`}
+                onClick={() => setActiveFilter(f)}
+              >
+                {f}
+              </button>
+            ))}
+          </div>
         </div>
 
         <div className={styles.grid}>
-          {projects.map((project, i) => (
+          {filtered.map((project, i) => (
             <div key={i} className={styles.card}>
               {/* Preview image */}
               {project.image && (

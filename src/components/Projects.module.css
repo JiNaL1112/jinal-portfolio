@@ -1,5 +1,76 @@
-.header { margin-bottom: 52px; }
+/* ── Header ── */
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
 
+.headerLabel {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--blue);
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.headerTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 6vw, 4.2rem);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.headerSubtitle {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 560px;
+  margin: 0 auto 36px;
+}
+
+/* ── Filter Buttons ── */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.filterBtn {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  background: transparent;
+  border: 1px solid var(--border-hover);
+  padding: 8px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+  letter-spacing: 0.05em;
+}
+
+.filterBtn:hover {
+  color: var(--white);
+  border-color: var(--blue);
+  background: rgba(59, 130, 246, 0.06);
+}
+
+.filterActive {
+  color: var(--white);
+  border-color: var(--blue);
+  background: rgba(59, 130, 246, 0.1);
+  box-shadow: 0 0 0 1px var(--blue);
+}
+
+/* ── Grid ── */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -69,7 +140,7 @@
   flex: 1;
 }
 
-/* Tags — subtle pill style like reference */
+/* Tags */
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -88,7 +159,7 @@
   letter-spacing: 0.03em;
 }
 
-/* Links — GitHub in cyan like reference */
+/* Links */
 .links {
   display: flex;
   gap: 20px;
@@ -148,4 +219,6 @@
 
 @media (max-width: 640px) {
   .grid { grid-template-columns: 1fr; }
+  .filters { gap: 6px; }
+  .filterBtn { padding: 7px 14px; font-size: 0.7rem; }
 }
