@@ -11,21 +11,20 @@ export default function Skills() {
           <div className="glow-line" />
         </div>
 
+        
+
         <div className={styles.grid}>
-          {Object.entries(skills).map(([category, items]) => (
-            <div key={category} className={`card ${styles.card}`}>
-              <div className={styles.cardHeader}>
-                <span className={styles.dot} />
-                <h3 className={styles.category}>{category}</h3>
-              </div>
-              <div className={styles.tags}>
-                {items.map(item => (
-                  <span key={item} className="tag">{item}</span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+  {Object.entries(skills).map(([category, items]) => (
+    <div key={category} className={styles.categoryGroup}>
+      <h3 className={styles.category}>{category}</h3>
+      <div className={styles.tags}>
+        {items.map(item => (
+          <span key={item} className={styles.pill}>{item}</span>
+        ))}
+      </div>
+    </div>
+  ))}
+</div>
 
         {/* Certifications */}
         <div className={styles.certSection}>
