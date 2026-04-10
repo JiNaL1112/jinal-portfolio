@@ -14,12 +14,12 @@ export const profile = {
 
 
 export const certifications = [
-  { name: "CKA", full: "Certified Kubernetes Administrator", icon: "⎈", color: "#E8B84B" },
-  { name: "CKAD", full: "Certified Kubernetes Application Developer", icon: "⎈", color: "#FF8C42" },
-  { name: "KCNA", full: "Kubernetes & Cloud Native Associate", icon: "☁", color: "#E8B84B" },
-  { name: "TF-003", full: "HashiCorp Terraform Associate (003)", icon: "◈", color: "#A07E2E" },
-  { name: "AZ-400", full: "Azure DevOps Engineer Expert", icon: "△", color: "#E8B84B" },
-  { name: "AZ-104", full: "Azure Administrator Associate", icon: "△", color: "#FF8C42" },
+  { name: "CKA", full: "Certified Kubernetes Administrator", icon: "⎈", color: "#E8B84B", credlyUrl: "https://www.credly.com/badges/062bf268-9526-4f8a-8570-d9799ea598f9/public_url" },
+  { name: "CKAD", full: "Certified Kubernetes Application Developer", icon: "⎈", color: "#FF8C42", credlyUrl: "https://www.credly.com/badges/27a33569-6001-403d-a34c-bd1e4ecaa23f/public_url" },
+  { name: "KCNA", full: "Kubernetes & Cloud Native Associate", icon: "☁", color: "#E8B84B", credlyUrl: "https://www.credly.com/badges/ca19329d-9468-4314-bc72-276807171247/public_url" },
+  { name: "TF-003", full: "HashiCorp Terraform Associate (003)", icon: "◈", color: "#A07E2E", credlyUrl: "https://www.credly.com/badges/8eebc1e5-f9b2-4840-a448-41778b353acb/public_url" },
+  { name: "AZ-400", full: "Azure DevOps Engineer Expert", icon: "△", color: "#E8B84B", credlyUrl: "https://www.credly.com/users/jinal-patel.e1e1a999" },
+  { name: "WES", full: "World Education Services Credential Evaluation", icon: "🎓", color: "#FF8C42", credlyUrl: "https://www.credly.com/badges/430a1d7b-75f7-4aff-971e-c314ab3da225/public_url" },
 ];
 
 export const skills = {
