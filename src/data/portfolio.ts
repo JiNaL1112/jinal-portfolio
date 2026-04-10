@@ -13,14 +13,67 @@ export const profile = {
 };
 
 
+// Replace your existing certifications array in src/data/portfolio.ts with this:
+
 export const certifications = [
-  { name: "CKA", full: "Certified Kubernetes Administrator", icon: "⎈", color: "#E8B84B", credlyUrl: "https://www.credly.com/badges/062bf268-9526-4f8a-8570-d9799ea598f9/public_url" },
-  { name: "CKAD", full: "Certified Kubernetes Application Developer", icon: "⎈", color: "#FF8C42", credlyUrl: "https://www.credly.com/badges/27a33569-6001-403d-a34c-bd1e4ecaa23f/public_url" },
-  { name: "KCNA", full: "Kubernetes & Cloud Native Associate", icon: "☁", color: "#E8B84B", credlyUrl: "https://www.credly.com/badges/ca19329d-9468-4314-bc72-276807171247/public_url" },
-  { name: "TF-003", full: "HashiCorp Terraform Associate (003)", icon: "◈", color: "#A07E2E", credlyUrl: "https://www.credly.com/badges/8eebc1e5-f9b2-4840-a448-41778b353acb/public_url" },
-  { name: "AZ-400", full: "Azure DevOps Engineer Expert", icon: "△", color: "#E8B84B", credlyUrl: "https://www.credly.com/users/jinal-patel.e1e1a999" },
-  { name: "WES", full: "World Education Services Credential Evaluation", icon: "🎓", color: "#FF8C42", credlyUrl: "https://www.credly.com/badges/430a1d7b-75f7-4aff-971e-c314ab3da225/public_url" },
+  {
+    name: "CKA",
+    full: "Certified Kubernetes Administrator",
+    issuer: "Cloud Native Computing Foundation",
+    icon: "⎈",
+    color: "#E8B84B",
+    credlyUrl: "https://www.credly.com/badges/062bf268-9526-4f8a-8570-d9799ea598f9/public_url",
+    imageUrl: "https://images.credly.com/images/062bf268-9526-4f8a-8570-d9799ea598f9/image.png",
+  },
+  {
+    name: "CKAD",
+    full: "Certified Kubernetes Application Developer",
+    issuer: "Cloud Native Computing Foundation",
+    icon: "⎈",
+    color: "#FF8C42",
+    credlyUrl: "https://www.credly.com/badges/27a33569-6001-403d-a34c-bd1e4ecaa23f/public_url",
+    imageUrl: "https://images.credly.com/images/27a33569-6001-403d-a34c-bd1e4ecaa23f/image.png",
+  },
+  {
+    name: "KCNA",
+    full: "Kubernetes & Cloud Native Associate",
+    issuer: "Cloud Native Computing Foundation",
+    icon: "☁",
+    color: "#E8B84B",
+    credlyUrl: "https://www.credly.com/badges/ca19329d-9468-4314-bc72-276807171247/public_url",
+    imageUrl: "https://images.credly.com/images/ca19329d-9468-4314-bc72-276807171247/image.png",
+  },
+  {
+    name: "TF-003",
+    full: "HashiCorp Terraform Associate (003)",
+    issuer: "HashiCorp",
+    icon: "◈",
+    color: "#A07E2E",
+    credlyUrl: "https://www.credly.com/badges/8eebc1e5-f9b2-4840-a448-41778b353acb/public_url",
+    imageUrl: "https://images.credly.com/images/8eebc1e5-f9b2-4840-a448-41778b353acb/image.png",
+  },
+  {
+    name: "AZ-400",
+    full: "Azure DevOps Engineer Expert",
+    issuer: "Microsoft",
+    icon: "△",
+    color: "#0078D4",
+    credlyUrl: "https://www.credly.com/users/jinal-patel.e1e1a999",
+    imageUrl: "https://images.credly.com/images/c3ab66f8-5d59-4afa-a6c2-0ba30a1989ca/image.png",
+  },
+  {
+    name: "WES",
+    full: "World Education Services Credential Evaluation",
+    issuer: "World Education Services",
+    icon: "🎓",
+    color: "#FF8C42",
+    credlyUrl: "https://www.credly.com/badges/430a1d7b-75f7-4aff-971e-c314ab3da225/public_url",
+    imageUrl: "https://images.credly.com/images/430a1d7b-75f7-4aff-971e-c314ab3da225/image.png",
+  },
 ];
+
+
+
 
 export const skills = {
   "Cloud Platforms": ["Azure (AKS, VMs, Functions, APIM, Storage)", "AWS (EKS, EC2, S3, ECS, ELB)"],
