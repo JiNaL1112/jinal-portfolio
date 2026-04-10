@@ -2,7 +2,7 @@ export const profile = {
   name: "Jinal Patel",
   title: "DevOps Engineer",
   subtitle: "Azure Cloud | Platform Engineering | Cloud-Native Infrastructure",
-  tagline: "Automating the Hard Way to build resilient, secure, and scalable systems.",
+  tagline: "Former developer turned platform engineer. Building resilient, scalable cloud-native infrastructure — the kind that stays up, scales automatically, and costs less to run.",
   location: "Ottawa, ON, Canada",
   email: "pateljinalben5521@gmail.com",
   linkedin: "https://www.linkedin.com/in/jinalbenp/",
@@ -10,10 +10,41 @@ export const profile = {
   medium: "https://medium.com/@jinalpatel11121999",
   phone: "+1 3658085159",
   experience: "4+ Years",
+  // Replace with your actual photo path, e.g. "/images/profile.jpg"
+  photo: "/images/profile.jpg",
 };
 
-
-// Replace your existing certifications array in src/data/portfolio.ts with this:
+export const about = {
+  lead: "I'm a DevOps Engineer based in Ottawa, ON, with 4+ years building cloud-native infrastructure on Azure and AWS — the kind that actually stays up.",
+  paragraphs: [
+    "My path into DevOps was deliberately hands-on. I started as a developer, moved into platform engineering, and spent years at the intersection of infrastructure and automation — learning that the best systems aren't just functional, they're observable, reproducible, and cheap to operate.",
+    "I've built scalable CI/CD pipelines from scratch, migrated teams from Azure DevOps to GitHub Actions, configured multi-cluster AKS environments with Helm and ArgoCD, and written enough Terraform to appreciate the value of a good module registry. Currently working at Technology Solutions, shipping infrastructure that developers don't have to think about.",
+    "Outside work, I run a bare-metal Kubernetes homelab with 2 mini PCs and a laptop — because breaking things intentionally is the fastest way to understand them. I write about what I learn on Medium.",
+  ],
+  tags: ["Terraform", "Kubernetes", "Azure", "GitHub Actions", "ArgoCD", "Helm", "Prometheus", "Python"],
+  traits: [
+    {
+      icon: "⚙",
+      title: "Infrastructure as Code",
+      body: "Everything reproducible. Terraform modules, Bicep templates, and ARM — I treat infra like software with tests, versioning, and CI.",
+    },
+    {
+      icon: "⎈",
+      title: "Kubernetes Native",
+      body: "CKA & CKAD certified. Designed multi-cluster AKS environments with Helm, ArgoCD, and GitOps workflows for production workloads.",
+    },
+    {
+      icon: "◎",
+      title: "Observability First",
+      body: "Prometheus, Grafana, ELK Stack, and Azure Monitor. I believe you can't operate what you can't see.",
+    },
+    {
+      icon: "🔒",
+      title: "Security Minded",
+      body: "RBAC, Key Vault, OPA/Gatekeeper, Trivy, Falco — security baked into pipelines, not bolted on at the end.",
+    },
+  ],
+};
 
 export const certifications = [
   {
@@ -71,39 +102,6 @@ export const certifications = [
     imageUrl: "../public/badges/wes.png",
   },
 ];
-
-// ── ADD THIS to src/data/portfolio.ts ──────────────────────────────────────
-// Place it after the existing `profile` export and before `certifications`.
-
-export const about = {
-  stats: [
-    { value: '4+', label: 'Years in DevOps' },
-    { value: '30+', label: 'CI/CD Pipelines Built' },
-    { value: '6', label: 'Certifications' },
-    { value: '50+', label: 'Cloud Services Mastered' },
-  ],
-  paragraphs: [
-    `I'm a <strong>DevOps Engineer</strong> based in Ottawa, ON, with 4+ years building
-    cloud-native infrastructure on Azure and AWS — the kind that actually stays up.`,
-
-    `My path into DevOps was deliberately hands-on. I started as a developer, moved into
-    platform engineering, and spent years at the intersection of infrastructure and
-    automation — learning that the best systems aren't just functional, they're
-    <strong>observable, reproducible, and cheap to operate</strong>.`,
-
-    `I've built scalable CI/CD pipelines from scratch, migrated teams from Azure DevOps to
-    GitHub Actions, configured multi-cluster AKS environments with Helm and ArgoCD, and
-    written enough Terraform to appreciate the value of a good module registry. Currently
-    working at <strong>Technology Solutions</strong>, shipping infrastructure that
-    developers don't have to think about.`,
-
-    `Outside work, I run a bare-metal Kubernetes homelab with 2 mini PCs and a laptop —
-    because breaking things intentionally is the fastest way to understand them. I write
-    about what I learn on
-    <a href="https://medium.com/@jinalpatel11121999" target="_blank" rel="noreferrer">Medium</a>.`,
-  ],
-};
-
 
 export const skills = {
   "Cloud Platforms": ["Azure (AKS, VMs, Functions, APIM, Storage)", "AWS (EKS, EC2, S3, ECS, ELB)"],
