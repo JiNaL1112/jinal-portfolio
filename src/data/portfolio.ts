@@ -72,6 +72,7 @@ export const projects = [
     github: "https://github.com/JiNaL1112/Terraform-Azure-Project1",
     article: "https://medium.com/@jinalpatel11121999/building-a-scalable-azure-infrastructure-with-terraform-vmss-load-balancer-autoscaling-aed061a7f591",
     type: "Infrastructure",
+    image: "https://miro.medium.com/v2/resize:fit:1400/1*your-article-image.png",
   },
   {
     title: "CloudOps Goal Tracker – Three-Tier Architecture",
@@ -80,6 +81,7 @@ export const projects = [
     github: "https://github.com/JiNaL1112/Azure_Terraform_Project_3",
     article: "https://medium.com/@jinalpatel11121999/building-a-production-grade-three-tier-application-on-azure-with-terraform-f54c0e8e31f7",
     type: "Architecture",
+    image: "https://miro.medium.com/v2/resize:fit:1400/1*your-article-image.png",
   },
   {
     title: "Automated Multi-Cloud CI/CD Pipeline",
@@ -87,6 +89,7 @@ export const projects = [
     tags: ["GitHub Actions", "AKS", "EKS", "Helm", "DevSecOps"],
     github: "https://github.com/JiNaL1112",
     type: "CI/CD",
+    image: "https://miro.medium.com/v2/resize:fit:1400/1*your-article-image.png",
   },
   {
     title: "Kubernetes Homelab – Multi-Node Cluster",
@@ -94,6 +97,7 @@ export const projects = [
     tags: ["Kubernetes", "Bare Metal", "Networking", "Prometheus", "Grafana"],
     article: "https://medium.com/@jinalpatel11121999/how-i-built-my-kubernetes-homelab-with-2-mini-pcs-and-a-laptop-what-nobody-warns-you-about-478f6116021e",
     type: "Kubernetes",
+    image: "https://miro.medium.com/v2/resize:fit:1400/1*your-article-image.png",
   },
 ];
 
