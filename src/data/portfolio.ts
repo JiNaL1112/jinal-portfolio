@@ -72,7 +72,37 @@ export const certifications = [
   },
 ];
 
+// ── ADD THIS to src/data/portfolio.ts ──────────────────────────────────────
+// Place it after the existing `profile` export and before `certifications`.
 
+export const about = {
+  stats: [
+    { value: '4+', label: 'Years in DevOps' },
+    { value: '30+', label: 'CI/CD Pipelines Built' },
+    { value: '6', label: 'Certifications' },
+    { value: '50+', label: 'Cloud Services Mastered' },
+  ],
+  paragraphs: [
+    `I'm a <strong>DevOps Engineer</strong> based in Ottawa, ON, with 4+ years building
+    cloud-native infrastructure on Azure and AWS — the kind that actually stays up.`,
+
+    `My path into DevOps was deliberately hands-on. I started as a developer, moved into
+    platform engineering, and spent years at the intersection of infrastructure and
+    automation — learning that the best systems aren't just functional, they're
+    <strong>observable, reproducible, and cheap to operate</strong>.`,
+
+    `I've built scalable CI/CD pipelines from scratch, migrated teams from Azure DevOps to
+    GitHub Actions, configured multi-cluster AKS environments with Helm and ArgoCD, and
+    written enough Terraform to appreciate the value of a good module registry. Currently
+    working at <strong>Technology Solutions</strong>, shipping infrastructure that
+    developers don't have to think about.`,
+
+    `Outside work, I run a bare-metal Kubernetes homelab with 2 mini PCs and a laptop —
+    because breaking things intentionally is the fastest way to understand them. I write
+    about what I learn on
+    <a href="https://medium.com/@jinalpatel11121999" target="_blank" rel="noreferrer">Medium</a>.`,
+  ],
+};
 
 
 export const skills = {
