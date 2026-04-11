@@ -65,20 +65,7 @@ export default function Hero() {
 
         </div>
 
-        {/* ── Stats bar ── */}
-        <div className={styles.statsBar}>
-          {[
-            { label: 'Years Experience', value: '4+' },
-            { label: 'Certifications', value: '6' },
-            { label: 'CI/CD Pipelines Built', value: '30+' },
-            { label: 'Cloud Services Mastered', value: '50+' },
-          ].map(stat => (
-            <div key={stat.label} className={styles.stat}>
-              <div className={styles.statValue}>{stat.value}</div>
-              <div className={styles.statLabel}>{stat.label}</div>
-            </div>
-          ))}
-        </div>
+        
       </div>
     </section>
   );

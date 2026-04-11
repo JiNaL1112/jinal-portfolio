@@ -50,21 +50,48 @@ export default function Experience() {
           ))}
         </div>
 
-        {/* Education */}
+        {/* ── Education ── */}
         <div className={styles.eduSection}>
-          <p className="section-label" style={{ marginBottom: '24px' }}>// education</p>
+          <p className="section-label" style={{ marginBottom: '32px' }}>// education</p>
+
           <div className={styles.eduGrid}>
             {education.map((edu, i) => (
               <div key={i} className={`card ${styles.eduCard}`}>
-                <div className={styles.eduIcon}>🎓</div>
-                <div>
-                  <h4 className={styles.eduDegree}>{edu.degree}</h4>
-                  <p className={styles.eduMeta}>{edu.institution} · {edu.period}</p>
+                {/* Top accent bar */}
+                <div className={styles.eduAccent} />
+
+                <div className={styles.eduInner}>
+                  {/* Year badge */}
+                  <div className={styles.eduYear}>
+                    {edu.period.split('–')[1]?.trim() || edu.period}
+                  </div>
+
+                  {/* Icon */}
+                  <div className={styles.eduIconWrap}>
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                      <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                    </svg>
+                  </div>
+
+                  {/* Content */}
+                  <div className={styles.eduContent}>
+                    <h4 className={styles.eduDegree}>{edu.degree}</h4>
+                    <div className={styles.eduMeta}>
+                      <span className={styles.eduInstitution}>{edu.institution}</span>
+                      <span className={styles.eduSep}>·</span>
+                      <span className={styles.eduPeriod}>{edu.period}</span>
+                    </div>
+                  </div>
+
+                  {/* Index number */}
+                  <div className={styles.eduIndex}>0{i + 1}</div>
                 </div>
               </div>
             ))}
           </div>
         </div>
+
       </div>
     </section>
   );
