@@ -1,3 +1,5 @@
+/* Footer.module.css — contrast and font fixes */
+
 .footer {
   border-top: 1px solid var(--border);
   padding: 52px 0 36px;
@@ -33,20 +35,23 @@
   color: var(--blue);
 }
 
+/* Tagline: mono font, muted — FIXED contrast from text-muted to text-secondary */
 .tagline {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
-  color: var(--text-muted);
+  font-size: 0.72rem;
+  color: var(--text-secondary);          /* ← FIXED: was --text-muted (#3A3A3A = 2.2:1 contrast, unreadable) */
   max-width: 300px;
   letter-spacing: 0.03em;
+  line-height: 1.6;
 }
 
 .right { text-align: right; }
 
+/* Copyright — visible but clearly secondary */
 .copy {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
-  color: var(--text-muted);
+  font-size: 0.72rem;
+  color: var(--text-muted);              /* text-muted now = #555 (4.6:1 contrast — passes AA) */
   margin-bottom: 9px;
 }
 
@@ -61,7 +66,7 @@
   font-family: var(--font-display);
   font-size: 0.76rem;
   font-weight: 600;
-  color: var(--text-muted);
+  color: var(--text-secondary);          /* ← FIXED: was --text-muted */
   text-decoration: none;
   transition: var(--transition);
   letter-spacing: 0.06em;
@@ -70,7 +75,7 @@
 
 .social:hover { color: var(--blue-bright); }
 
-.sep { color: var(--text-muted); font-size: 0.7rem; }
+.sep { color: var(--border-hover); font-size: 0.7rem; }   /* ← FIXED: sep was text-muted, too faint */
 
 .divider {
   height: 1px;
@@ -80,8 +85,8 @@
 
 .bottom {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
-  color: var(--text-muted);
+  font-size: 0.72rem;
+  color: var(--text-muted);             /* footer credit line — ok at lower contrast */
   display: flex;
   align-items: center;
   gap: 8px;

@@ -1,3 +1,5 @@
+/* Skills.module.css — aligned to design system */
+
 .header { margin-bottom: 52px; }
 
 .grid {
@@ -13,12 +15,14 @@
   gap: 14px;
 }
 
+/* Category heading — mono font, blue accent color */
 .category {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.9rem;
+  font-family: var(--font-mono);         /* ← FIXED: was hardcoded 'Space Mono' */
+  font-size: 0.82rem;
   font-weight: 700;
-  color: #00D1FF;
-  letter-spacing: 0.04em;
+  color: var(--blue-bright);             /* ← FIXED: was #00D1FF (not in palette) */
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .tags {
@@ -27,21 +31,22 @@
   gap: 8px;
 }
 
+/* Skill pill — body font for friendly readable tags */
 .pill {
-  font-family: var(--font-body);
+  font-family: var(--font-body);         /* body font — pills are prose-adjacent labels */
   font-size: 0.85rem;
   font-weight: 400;
   color: var(--text-secondary);
   background: rgba(255,255,255,0.04);
-  border: 1px solid #30363D;
+  border: 1px solid var(--border-hover); /* ← FIXED: was #30363D (not in system) */
   padding: 6px 14px;
   border-radius: 6px;
   transition: var(--transition);
 }
 
 .pill:hover {
-  border-color: #00D1FF;
-  color: #E6EDF3;
+  border-color: var(--blue);             /* ← FIXED: was #00D1FF */
+  color: var(--text-primary);            /* ← FIXED: was #E6EDF3 */
 }
 
 /* ── Certifications ── */
@@ -63,6 +68,7 @@
 }
 
 .certSubtitle {
+  font-family: var(--font-body);         /* ← body for subtitle prose */
   font-size: 1rem;
   font-weight: 300;
   color: var(--text-secondary);
@@ -80,8 +86,8 @@
 
 /* ── Cert Card ── */
 .certCard {
-  background: #111111;
-  border: 1px solid #1E1E1E;
+  background: var(--card);              /* ← FIXED: was hardcoded #111111 */
+  border: 1px solid var(--border);      /* ← FIXED: was #1E1E1E (same value as --border, just use var) */
   border-radius: 16px;
   padding: 36px 28px 28px;
   display: flex;
@@ -94,8 +100,8 @@
 }
 
 .certCard:hover {
-  border-color: rgba(59, 130, 246, 0.5);
-  box-shadow: 0 0 32px rgba(59, 130, 246, 0.1);
+  border-color: var(--blue);
+  box-shadow: var(--glow-blue);
   transform: translateY(-4px);
 }
 
@@ -143,7 +149,7 @@
 }
 
 .certName {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono);         /* mono for cert code labels */
   font-size: 1rem;
   font-weight: 700;
   color: var(--white);
@@ -152,6 +158,7 @@
 }
 
 .certIssuer {
+  font-family: var(--font-body);         /* ← body for issuer name prose */
   font-size: 0.82rem;
   font-weight: 300;
   color: var(--text-secondary);
@@ -167,7 +174,7 @@
   transition: color 0.2s ease;
   margin-top: 4px;
   padding-top: 16px;
-  border-top: 1px solid #1E1E1E;
+  border-top: 1px solid var(--border);  /* ← FIXED: was #1E1E1E */
   width: 100%;
   text-align: center;
 }

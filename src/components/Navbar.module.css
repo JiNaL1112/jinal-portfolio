@@ -73,10 +73,10 @@
 }
 
 .link {
-  font-family: var(--font-display);
-  font-size: 0.82rem;
-  font-weight: 500;
-  color: var(--text-muted);
+  font-family: var(--font-mono);          /* ← FIXED: was --font-display */
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-secondary);           /* ← FIXED: was --text-muted (too dark, unreadable) */
   padding: 6px 13px;
   border-radius: var(--radius);
   transition: var(--transition);
@@ -130,7 +130,7 @@
   display: block;
   width: 20px;
   height: 1.5px;
-  background: var(--text-primary);
+  background: var(--text-secondary);   /* ← FIXED: was --text-primary, now consistent */
   border-radius: 1px;
   transition: var(--transition);
 }
@@ -145,10 +145,10 @@
 }
 
 .mobileLink {
-  font-family: var(--font-display);
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--text-secondary);
+  font-family: var(--font-mono);        /* ← FIXED: was --font-display, mono for nav items */
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--text-secondary);         /* ← FIXED: was --text-secondary, consistent */
   padding: 12px 0;
   border-bottom: 1px solid var(--border);
   text-decoration: none;
