@@ -24,6 +24,11 @@ function estimateReadTime(content: string): string {
   return `${Math.max(1, Math.round(words / 200))} min read`;
 }
 
+function extractFirstImage(content: string): string {
+  const match = content.match(/<img[^>]+src=["']([^"']+)["']/);
+  return match ? match[1] : '';
+}
+
 export function useMediumArticles() {
   const [articles, setArticles] = useState<MediumArticle[]>([]);
   const [loading, setLoading] = useState(true);
@@ -57,7 +62,7 @@ export function useMediumArticles() {
               readTime: estimateReadTime(item.content ?? ''),
               url: item.link ?? '',
               tags: (item.categories ?? []).slice(0, 3),
-              image: item.thumbnail ?? '',
+              image: item.thumbnail || extractFirstImage(item.content ?? '') || extractFirstImage(item.description ?? ''),
               featured: i === 0,
             };
           }
