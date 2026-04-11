@@ -8,9 +8,29 @@ const navLinks = [
   { href: '#experience', label: 'Experience' },
   { href: '#projects', label: 'Projects' },
   { href: '#articles', label: 'Articles' },
-  { href: '#contact', label: 'Contact' },
   { href: '#homelab', label: 'Homelab' },
+  { href: '#contact', label: 'Contact' },
 ];
+
+// LinkedIn SVG icon
+function LinkedInIcon() {
+  return (
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+    </svg>
+  );
+}
+
+// Download icon
+function DownloadIcon() {
+  return (
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+      <polyline points="7 10 12 15 17 10" />
+      <line x1="12" y1="15" x2="12" y2="3" />
+    </svg>
+  );
+}
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -56,9 +76,35 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <a href={`mailto:${profile.email}`} className={styles.cta}>
-          Hire Me
-        </a>
+        {/* Right-side actions */}
+        <div className={styles.actions}>
+          {/* LinkedIn icon button */}
+          <a
+            href={profile.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            className={styles.iconBtn}
+            aria-label="LinkedIn profile"
+          >
+            <LinkedInIcon />
+          </a>
+
+          {/* Download CV */}
+          <a
+            href="/Jinal_Patel_CV.pdf"
+            download
+            className={styles.cvBtn}
+            aria-label="Download CV"
+          >
+            <DownloadIcon />
+            <span>CV</span>
+          </a>
+
+          {/* Hire Me */}
+          <a href={`mailto:${profile.email}`} className={styles.cta}>
+            Hire Me
+          </a>
+        </div>
 
         <button
           className={styles.hamburger}
@@ -83,6 +129,27 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+          {/* Mobile: CV + LinkedIn + Hire Me at bottom */}
+          <div className={styles.mobileCtas}>
+            <a
+              href="/Jinal_Patel_CV.pdf"
+              download
+              className={styles.mobileCvBtn}
+            >
+              <DownloadIcon /> Download CV
+            </a>
+            <a
+              href={profile.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              className={styles.mobileCvBtn}
+            >
+              <LinkedInIcon /> LinkedIn
+            </a>
+            <a href={`mailto:${profile.email}`} className={styles.mobileHireBtn}>
+              Hire Me
+            </a>
+          </div>
         </div>
       )}
     </nav>

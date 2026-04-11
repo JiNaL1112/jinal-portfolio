@@ -1,3 +1,65 @@
+/* ── Quick contact strip ── */
+.quickStrip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px 24px;
+  background: rgba(59,130,246,0.04);
+  border: 1px solid rgba(59,130,246,0.15);
+  border-radius: var(--radius);
+  margin-bottom: 32px;
+}
+
+.quickLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.quickLabel {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--blue);
+  letter-spacing: 0.15em;
+}
+
+.quickText {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.quickRight {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.quickEmail {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--blue-bright);
+  text-decoration: none;
+  transition: var(--transition);
+  letter-spacing: 0.02em;
+}
+
+.quickEmail:hover { color: var(--white); text-decoration: underline; }
+
+.quickPhone {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.quickPhone:hover { color: var(--white); }
+
+/* ── Main wrapper ── */
 .wrapper {
   background: var(--card);
   border: 1px solid var(--border);
@@ -45,7 +107,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 72px;
-  align-items: center;
+  align-items: start;
   position: relative;
   z-index: 1;
 }
@@ -103,6 +165,7 @@
 
 .emailBtn:hover .emailArrow { transform: translateX(4px); }
 
+/* ── Contact cards ── */
 .right {
   display: flex;
   flex-direction: column;
@@ -113,7 +176,7 @@
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 16px 18px;
+  padding: 14px 18px;
   text-decoration: none;
   background: rgba(255,255,255,0.02);
   border: 1px solid var(--border);
@@ -129,8 +192,8 @@
 }
 
 .contactIcon {
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   border-radius: var(--radius);
   display: flex;
   align-items: center;
@@ -146,11 +209,12 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
+  min-width: 0;
 }
 
 .contactLabel {
   font-family: var(--font-mono);
-  font-size: 0.66rem;
+  font-size: 0.62rem;
   font-weight: 700;
   color: var(--text-muted);
   letter-spacing: 0.12em;
@@ -159,9 +223,12 @@
 
 .contactValue {
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   color: var(--text-secondary);
   transition: var(--transition);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .contactCard:hover .contactValue { color: var(--white); }
@@ -171,12 +238,19 @@
   color: var(--blue);
   opacity: 0;
   transition: var(--transition);
+  flex-shrink: 0;
 }
 
 .contactCard:hover .contactArrow { opacity: 1; }
 
+/* ── Responsive ── */
 @media (max-width: 900px) {
   .inner { grid-template-columns: 1fr; gap: 44px; }
   .wrapper { padding: 40px 24px; }
   .wrapper::before, .wrapper::after { display: none; }
+}
+
+@media (max-width: 640px) {
+  .quickStrip { flex-direction: column; align-items: flex-start; }
+  .quickRight { flex-direction: column; align-items: flex-start; gap: 8px; }
 }

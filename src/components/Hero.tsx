@@ -2,6 +2,33 @@ import { useEffect, useRef } from 'react';
 import { profile } from '../data/portfolio';
 import styles from './Hero.module.css';
 
+function LinkedInIcon() {
+  return (
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+    </svg>
+  );
+}
+
+function DownloadIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+      <polyline points="7 10 12 15 17 10" />
+      <line x1="12" y1="15" x2="12" y2="3" />
+    </svg>
+  );
+}
+
+function LocationIcon() {
+  return (
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+      <circle cx="12" cy="10" r="3" />
+    </svg>
+  );
+}
+
 export default function Hero() {
   return (
     <section className={styles.hero} id="about">
@@ -12,6 +39,19 @@ export default function Hero() {
 
           {/* ── LEFT: Content ── */}
           <div className={styles.content}>
+
+            {/* Location + availability strip — visible immediately */}
+            <div className={styles.metaStrip}>
+              <span className={styles.metaItem}>
+                <LocationIcon />
+                Ottawa, ON · Canada
+              </span>
+              <span className={styles.metaSep}>·</span>
+              <span className={styles.metaAvail}>
+                <span className={styles.dot} />
+                Open to opportunities
+              </span>
+            </div>
 
             {/* Name */}
             <h1 className={styles.name}>{profile.name}</h1>
@@ -25,20 +65,34 @@ export default function Hero() {
             {/* Tagline */}
             <p className={styles.tagline}>{profile.tagline}</p>
 
-            {/* Open to opportunities badge */}
-            <div className={styles.badge}>
-              <span className={styles.dot} />
-              Open to opportunities
-            </div>
-
             {/* CTA Buttons */}
             <div className={styles.actions}>
               <a href="#projects" className={styles.btnPrimary}>
                 View Projects
               </a>
-              <a href={profile.github} target="_blank" rel="noreferrer" className={styles.btnOutline}>
-                GitHub
+
+              {/* Download CV — high visibility */}
+              <a
+                href="/Jinal_Patel_CV.pdf"
+                download
+                className={styles.btnCV}
+              >
+                <DownloadIcon />
+                Download CV
               </a>
+
+              {/* LinkedIn */}
+              <a
+                href={profile.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className={styles.btnOutline}
+                aria-label="LinkedIn profile"
+              >
+                <LinkedInIcon />
+                LinkedIn
+              </a>
+
               <a href="#contact" className={styles.btnOutline}>
                 Get in touch
               </a>
@@ -64,8 +118,6 @@ export default function Hero() {
           </div>
 
         </div>
-
-        
       </div>
     </section>
   );

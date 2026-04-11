@@ -21,11 +21,12 @@
   padding: 0 28px;
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 32px;
   position: relative;
   z-index: 1;
 }
 
+/* ── Logo ── */
 .logo {
   display: flex;
   align-items: center;
@@ -64,20 +65,22 @@
   50% { opacity: 0; }
 }
 
+/* ── Nav links ── */
 .links {
   display: flex;
   align-items: center;
   gap: 2px;
   list-style: none;
+  /* push to center */
   margin-left: auto;
 }
 
 .link {
-  font-family: var(--font-mono);          /* ← FIXED: was --font-display */
+  font-family: var(--font-mono);
   font-size: 0.75rem;
   font-weight: 400;
-  color: var(--text-secondary);           /* ← FIXED: was --text-muted (too dark, unreadable) */
-  padding: 6px 13px;
+  color: var(--text-secondary);
+  padding: 6px 12px;
   border-radius: var(--radius);
   transition: var(--transition);
   text-decoration: none;
@@ -94,13 +97,69 @@
 
 .link.active { color: var(--blue-bright); }
 
+/* ── Right-side actions group ── */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* LinkedIn icon button */
+.iconBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-hover);
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.iconBtn:hover {
+  color: #60A5FA;
+  border-color: var(--blue);
+  background: rgba(59,130,246,0.08);
+}
+
+/* Download CV button */
+.cvBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-hover);
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.cvBtn:hover {
+  color: var(--white);
+  border-color: var(--blue);
+  background: rgba(59,130,246,0.06);
+  box-shadow: var(--glow-blue);
+}
+
+/* Hire Me — primary CTA */
 .cta {
   font-family: var(--font-display);
   font-size: 0.78rem;
   font-weight: 700;
   color: var(--white);
   background: var(--blue);
-  padding: 8px 20px;
+  padding: 8px 18px;
   border-radius: var(--radius);
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -116,6 +175,7 @@
   box-shadow: var(--glow-blue);
 }
 
+/* ── Hamburger ── */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -130,25 +190,26 @@
   display: block;
   width: 20px;
   height: 1.5px;
-  background: var(--text-secondary);   /* ← FIXED: was --text-primary, now consistent */
+  background: var(--text-secondary);
   border-radius: 1px;
   transition: var(--transition);
 }
 
+/* ── Mobile menu ── */
 .mobileMenu {
   display: none;
   flex-direction: column;
   background: #000;
   border-top: 1px solid var(--border);
-  padding: 16px 28px;
+  padding: 16px 28px 24px;
   gap: 2px;
 }
 
 .mobileLink {
-  font-family: var(--font-mono);        /* ← FIXED: was --font-display, mono for nav items */
+  font-family: var(--font-mono);
   font-size: 0.9rem;
   font-weight: 400;
-  color: var(--text-secondary);         /* ← FIXED: was --text-secondary, consistent */
+  color: var(--text-secondary);
   padding: 12px 0;
   border-bottom: 1px solid var(--border);
   text-decoration: none;
@@ -158,8 +219,66 @@
 
 .mobileLink:hover { color: var(--blue-bright); }
 
-@media (max-width: 768px) {
-  .links, .cta { display: none; }
+/* Mobile CTA row — CV, LinkedIn, Hire Me */
+.mobileCtas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 4px;
+}
+
+.mobileCvBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-hover);
+  padding: 11px 16px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+
+.mobileCvBtn:hover {
+  color: var(--white);
+  border-color: var(--blue);
+  background: rgba(59,130,246,0.06);
+}
+
+.mobileHireBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--white);
+  background: var(--blue);
+  border: 1px solid var(--blue);
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+
+.mobileHireBtn:hover {
+  background: transparent;
+  color: var(--blue-bright);
+  box-shadow: var(--glow-blue);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .links { display: none; }
+  .actions { display: none; }
   .hamburger { display: flex; }
   .mobileMenu { display: flex; }
   .inner { gap: 0; }
