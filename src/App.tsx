@@ -1,4 +1,4 @@
-// src/App.tsx — add /articles route
+// src/App.tsx
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './styles/global.css';
@@ -15,7 +15,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 import HomelabPage from './pages/HomelabPage';
-import ArticlesPage from './pages/ArticlesPage';   // ← NEW
+import ArticlesPage from './pages/ArticlesPage';  // ← NEW
 
 function Portfolio() {
   return (
@@ -42,7 +42,7 @@ export default function App() {
       <Routes>
         <Route path="/"         element={<Portfolio />} />
         <Route path="/homelab"  element={<HomelabPage />} />
-        <Route path="/articles" element={<ArticlesPage />} />   {/* ← NEW */}
+        <Route path="/articles" element={<ArticlesPage />} />  {/* ← NEW */}
       </Routes>
     </BrowserRouter>
   );

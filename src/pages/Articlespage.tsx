@@ -1,13 +1,9 @@
 // src/pages/ArticlesPage.tsx
-// Standalone page at /articles — full listing with tag filters
-
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { articles } from '../data/articles';
+import { useMediumArticles } from '../hooks/useMediumArticles';
+import { articles as staticArticles } from '../data/articles';
 import styles from './ArticlesPage.module.css';
-
-// Collect all unique tags
-const allTags = ['All', ...Array.from(new Set(articles.flatMap(a => a.tags)))];
 
 function ArticleIcon({ tags }: { tags: string[] }) {
   const tag = tags[0]?.toLowerCase() ?? '';
@@ -65,11 +61,18 @@ function ArticleIcon({ tags }: { tags: string[] }) {
 }
 
 export default function ArticlesPage() {
+  const { articles: liveArticles, loading, error } = useMediumArticles();
   const [activeTag, setActiveTag] = useState('All');
 
+  // Use live articles if available, fall back to static
+  const allArticles = liveArticles.length > 0 ? liveArticles : staticArticles;
+
+  // Collect all unique tags
+  const allTags = ['All', ...Array.from(new Set(allArticles.flatMap(a => a.tags)))];
+
   const filtered = activeTag === 'All'
-    ? articles
-    : articles.filter(a => a.tags.includes(activeTag));
+    ? allArticles
+    : allArticles.filter(a => a.tags.includes(activeTag));
 
   const featured = filtered.find(a => a.featured) ?? filtered[0];
   const rest = filtered.filter(a => a !== featured);
@@ -97,8 +100,9 @@ export default function ArticlesPage() {
             and DevOps engineering — written for practitioners, not tutorials.
           </p>
           <div className={styles.docMeta}>
-            <span>{articles.length} articles</span>
+            <span>{allArticles.length} articles</span>
             <span>·</span>
+            {error && <span style={{ color: '#F87171', fontSize: '0.7rem' }}>{error} (showing cached)</span>}
             <a
               href="https://medium.com/@jinalpatel11121999"
               target="_blank" rel="noreferrer"
@@ -109,21 +113,46 @@ export default function ArticlesPage() {
           </div>
         </div>
 
+        {/* Loading state */}
+        {loading && (
+          <div style={{
+            fontFamily: 'var(--font-mono)',
+            fontSize: '0.78rem',
+            color: 'var(--text-muted)',
+            padding: '40px 0',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '10px',
+          }}>
+            <span style={{
+              display: 'inline-block',
+              width: '6px',
+              height: '6px',
+              borderRadius: '50%',
+              background: '#3B82F6',
+              animation: 'pulse 1.5s ease-in-out infinite',
+            }} />
+            $ curl medium.com/feed/@jinalpatel11121999...
+          </div>
+        )}
+
         {/* Tag filters */}
-        <div className={styles.filters}>
-          {allTags.map(tag => (
-            <button
-              key={tag}
-              className={`${styles.filterBtn} ${activeTag === tag ? styles.filterActive : ''}`}
-              onClick={() => setActiveTag(tag)}
-            >
-              {tag}
-            </button>
-          ))}
-        </div>
+        {!loading && (
+          <div className={styles.filters}>
+            {allTags.map(tag => (
+              <button
+                key={tag}
+                className={`${styles.filterBtn} ${activeTag === tag ? styles.filterActive : ''}`}
+                onClick={() => setActiveTag(tag)}
+              >
+                {tag}
+              </button>
+            ))}
+          </div>
+        )}
 
         {/* Featured article */}
-        {featured && (
+        {!loading && featured && (
           <a
             href={featured.url}
             target="_blank" rel="noreferrer"
@@ -161,7 +190,7 @@ export default function ArticlesPage() {
         )}
 
         {/* Grid */}
-        {rest.length > 0 && (
+        {!loading && rest.length > 0 && (
           <div className={styles.grid}>
             {rest.map((article, i) => (
               <a
@@ -170,7 +199,6 @@ export default function ArticlesPage() {
                 target="_blank" rel="noreferrer"
                 className={styles.card}
               >
-                {/* Image / icon */}
                 <div className={styles.cardImage}>
                   {article.image ? (
                     <img
@@ -183,7 +211,6 @@ export default function ArticlesPage() {
                   )}
                 </div>
 
-                {/* Body */}
                 <div className={styles.cardBody}>
                   <div className={styles.meta}>
                     <span className={styles.metaDate}>{article.date}</span>
@@ -205,7 +232,7 @@ export default function ArticlesPage() {
           </div>
         )}
 
-        {filtered.length === 0 && (
+        {!loading && filtered.length === 0 && (
           <div className={styles.empty}>
             <span>No articles found for "{activeTag}"</span>
           </div>
@@ -227,6 +254,7 @@ export default function ArticlesPage() {
             <Link to="/" className={styles.footerLink}>← Portfolio</Link>
           </div>
         </div>
+
       </div>
     </div>
   );
