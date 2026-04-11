@@ -182,43 +182,7 @@ export const projects = [
   },
 ];
 
-export const articles = [
-  {
-    title: "How I Built My Kubernetes Homelab with 2 Mini PCs and a Laptop",
-    subtitle: "What Nobody Warns You About",
-    date: "Apr 2026",
-    url: "https://medium.com/@jinalpatel11121999/how-i-built-my-kubernetes-homelab-with-2-mini-pcs-and-a-laptop-what-nobody-warns-you-about-478f6116021e",
-    tags: ["Kubernetes", "Homelab", "Bare Metal"],
-  },
-  {
-    title: "How Kubernetes Requests and Limits Really Work",
-    subtitle: "Resource management deep dive for engineers",
-    date: "Feb 2026",
-    url: "https://medium.com/@jinalpatel11121999/how-kubernetes-requests-and-limits-really-work-b9347db6f856",
-    tags: ["Kubernetes", "Resource Management", "DevOps"],
-  },
-  {
-    title: "How I Added a Remote EKS Cluster to Argo CD",
-    subtitle: "Declarative, Secure, and Reproducible",
-    date: "Nov 2025",
-    url: "https://medium.com/@jinalpatel11121999/how-i-added-a-remote-eks-cluster-to-argo-cd-declarative-secure-and-reproducible-e5fd66411441",
-    tags: ["ArgoCD", "EKS", "GitOps"],
-  },
-  {
-    title: "Building a Scalable Azure Infrastructure with Terraform",
-    subtitle: "VMSS, Load Balancer, and Autoscaling",
-    date: "2024",
-    url: "https://medium.com/@jinalpatel11121999/building-a-scalable-azure-infrastructure-with-terraform-vmss-load-balancer-autoscaling-aed061a7f591",
-    tags: ["Terraform", "Azure", "IaC"],
-  },
-  {
-    title: "Building a Production-Grade Three-Tier Application on Azure",
-    subtitle: "With Terraform – Enterprise Architecture Patterns",
-    date: "2024",
-    url: "https://medium.com/@jinalpatel11121999/building-a-production-grade-three-tier-application-on-azure-with-terraform-f54c0e8e31f7",
-    tags: ["Azure", "Terraform", "Architecture"],
-  },
-];
+
 
 export const education = [
   {

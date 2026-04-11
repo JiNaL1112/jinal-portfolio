@@ -1,0 +1,61 @@
+// articles.ts — standalone article data with image support
+// Drop this in src/data/ and import from here or merge into portfolio.ts
+
+export const articles = [
+  {
+    title: "How I Built My Kubernetes Homelab with 2 Mini PCs and a Laptop",
+    subtitle: "What Nobody Warns You About",
+    date: "Apr 2026",
+    readTime: "12 min read",
+    url: "https://medium.com/@jinalpatel11121999/how-i-built-my-kubernetes-homelab-with-2-mini-pcs-and-a-laptop-what-nobody-warns-you-about-478f6116021e",
+    tags: ["Kubernetes", "Homelab", "Bare Metal"],
+    // Replace with actual image URLs or local paths like "/images/articles/homelab.png"
+    image: "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*your-homelab-image.png",
+    imageFallbackColor: "#0D1117",
+    featured: true,
+  },
+  {
+    title: "How Kubernetes Requests and Limits Really Work",
+    subtitle: "Resource management deep dive for engineers",
+    date: "Feb 2026",
+    readTime: "8 min read",
+    url: "https://medium.com/@jinalpatel11121999/how-kubernetes-requests-and-limits-really-work-b9347db6f856",
+    tags: ["Kubernetes", "Resource Management", "DevOps"],
+    image: "",
+    imageFallbackColor: "#0D1117",
+    featured: false,
+  },
+  {
+    title: "How I Added a Remote EKS Cluster to Argo CD",
+    subtitle: "Declarative, Secure, and Reproducible",
+    date: "Nov 2025",
+    readTime: "6 min read",
+    url: "https://medium.com/@jinalpatel11121999/how-i-added-a-remote-eks-cluster-to-argo-cd-declarative-secure-and-reproducible-e5fd66411441",
+    tags: ["ArgoCD", "EKS", "GitOps"],
+    image: "",
+    imageFallbackColor: "#0D1117",
+    featured: false,
+  },
+  {
+    title: "Building a Scalable Azure Infrastructure with Terraform",
+    subtitle: "VMSS, Load Balancer, and Autoscaling",
+    date: "2024",
+    readTime: "10 min read",
+    url: "https://medium.com/@jinalpatel11121999/building-a-scalable-azure-infrastructure-with-terraform-vmss-load-balancer-autoscaling-aed061a7f591",
+    tags: ["Terraform", "Azure", "IaC"],
+    image: "",
+    imageFallbackColor: "#0D1117",
+    featured: false,
+  },
+  {
+    title: "Building a Production-Grade Three-Tier Application on Azure",
+    subtitle: "With Terraform – Enterprise Architecture Patterns",
+    date: "2024",
+    readTime: "14 min read",
+    url: "https://medium.com/@jinalpatel11121999/building-a-production-grade-three-tier-application-on-azure-with-terraform-f54c0e8e31f7",
+    tags: ["Azure", "Terraform", "Architecture"],
+    image: "",
+    imageFallbackColor: "#0D1117",
+    featured: false,
+  },
+];

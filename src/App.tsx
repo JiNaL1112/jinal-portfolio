@@ -1,23 +1,21 @@
-// src/App.tsx
-// Run: npm install react-router-dom @types/react-router-dom
+// src/App.tsx — add /articles route
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './styles/global.css';
 
-// Portfolio sections
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
-import Homelab from './components/Homelab';      // ← section card
+import Homelab from './components/Homelab';
 import Articles from './components/Articles';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
-// Homelab standalone page
-import HomelabPage from './pages/HomelabPage';  // ← full page
+import HomelabPage from './pages/HomelabPage';
+import ArticlesPage from './pages/ArticlesPage';   // ← NEW
 
 function Portfolio() {
   return (
@@ -29,7 +27,7 @@ function Portfolio() {
         <Skills />
         <Experience />
         <Projects />
-        <Homelab />    {/* ← add between Projects and Articles */}
+        <Homelab />
         <Articles />
         <Contact />
       </main>
@@ -44,6 +42,7 @@ export default function App() {
       <Routes>
         <Route path="/"         element={<Portfolio />} />
         <Route path="/homelab"  element={<HomelabPage />} />
+        <Route path="/articles" element={<ArticlesPage />} />   {/* ← NEW */}
       </Routes>
     </BrowserRouter>
   );
