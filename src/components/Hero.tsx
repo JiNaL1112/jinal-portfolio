@@ -31,7 +31,7 @@ function LocationIcon() {
 
 export default function Hero() {
   return (
-    <section className={styles.hero} id="about">
+    <section className={styles.hero} id="about-section">
       <div className={styles.glow1} />
 
       <div className="container">
