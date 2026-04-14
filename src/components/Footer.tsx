@@ -20,7 +20,7 @@ export default function Footer() {
 
           <div className={styles.right}>
             <p className={styles.copy}>
-              © {year} {profile.name} · Ottawa, ON, Canada
+              © {year} {profile.name} · Kitchener, ON, Canada
             </p>
             <div className={styles.socials}>
               <a href={profile.github} target="_blank" rel="noreferrer" className={styles.social}>GitHub</a>
@@ -32,12 +32,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className={styles.divider} />
-
-        <p className={styles.bottom}>
-          <span className={styles.mono}>$</span> Built with React + TypeScript + Vite
-          <span className={styles.cursor} />
-        </p>
+        
       </div>
     </footer>
   );

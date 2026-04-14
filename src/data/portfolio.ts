@@ -2,8 +2,8 @@ export const profile = {
   name: "Jinal Patel",
   title: "DevOps Engineer",
   subtitle: "Azure Cloud | Platform Engineering | Cloud-Native Infrastructure",
-  tagline: "Former developer turned platform engineer. Building resilient, scalable cloud-native infrastructure — the kind that stays up, scales automatically, and costs less to run.",
-  location: "Ottawa, ON, Canada",
+  tagline: "DevOps Engineer building resilient, scalable cloud platforms and CI/CD systems — automating infrastructure, strengthening reliability, and keeping deployments fast, secure, and cost-efficient",
+  location: "Kitchener, ON, Canada",
   email: "pateljinalben5521@gmail.com",
   linkedin: "https://www.linkedin.com/in/jinalbenp/",
   github: "https://github.com/JiNaL1112",
@@ -15,11 +15,11 @@ export const profile = {
 };
 
 export const about = {
-  lead: "I'm a DevOps Engineer based in Kitchener, ON, with 4+ years building cloud-native infrastructure on Azure and AWS — the kind that actually stays up.",
+  lead: "DevOps Engineer with 4+ years of hands-on experience automating cloud-native infrastructure on Azure and AWS, turning complex systems into reliable, scalable platforms that just work.",
   paragraphs: [
-    "My path into DevOps was deliberately hands-on. I started as a developer, moved into platform engineering, and spent years at the intersection of infrastructure and automation — learning that the best systems aren't just functional, they're observable, reproducible, and cheap to operate.",
-    "I've built scalable CI/CD pipelines from scratch, migrated teams from Azure DevOps to GitHub Actions, configured multi-cluster AKS environments with Helm and ArgoCD, and written enough Terraform to appreciate the value of a good module registry. Currently working at Technology Solutions, shipping infrastructure that developers don't have to think about.",
-    "Outside work, I run a bare-metal Kubernetes homelab with 2 mini PCs and a laptop — because breaking things intentionally is the fastest way to understand them. I write about what I learn on Medium.",
+    "From my start at TatvaSoft to my current role at Technology Solutions in Canada, I've mastered the full stack of modern DevOps and platform engineering: provisioning multi-cloud environments with Terraform, ARM, and Bicep; orchestrating containerized apps on AKS/EKS with Helm, ArgoCD GitOps, and Kubernetes security tools like Trivy, Falco, and OPA Gatekeeper; and building CI/CD pipelines in Azure DevOps, GitHub Actions, and Jenkins that deliver zero-downtime deploys with built-in monitoring via Prometheus, Grafana, and Azure Monitor",
+    "I've optimized costs with auto-scaling and right-sizing, secured clusters with RBAC, Key Vault, and Defender for Cloud, and driven event-driven architectures using Apache Kafka—all while mentoring teams on DevSecOps best practices. Certifications like CKA, CKAD, AZ-400, and Terraform Associate back my expertise",
+    "When I'm not shipping production-grade infra, I tinker with a bare-metal Kubernetes homelab on mini PCs, break things to learn faster, and share insights on Medium. Let's generate cloud infrastructure that scales effortlessly."
   ],
   tags: ["Terraform", "Kubernetes", "Azure", "GitHub Actions", "ArgoCD", "Helm", "Prometheus", "Python"],
   traits: [
@@ -121,12 +121,11 @@ export const experience = [
     period: "Oct 2023 – Present",
     location: "Canada",
     highlights: [
-      "Designed scalable CI/CD pipelines using GitHub Actions with reusable YAML workflows and templates",
-      "Led migration initiatives from Azure DevOps to GitHub Actions, reducing operational overhead",
-      "Built and maintained database CI/CD pipelines with automated schema versioning and testing",
-      "Implemented IaC using ARM templates, Terraform, Azure CLI, and Azure PowerShell",
-      "Configured monitoring with ELK Stack, Prometheus, and Grafana for full system observability",
-      "Integrated automated validation, quality gates, and approval workflows into CI/CD pipelines",
+      "Designed and managed robust CI/CD pipelines using Azure DevOps, GitHub Actions, and Jenkins for automated, reliable deployments—accelerating software delivery and reducing manual intervention.",
+"Provisioned cloud infrastructure with Terraform, ARM Templates, and Bicep, ensuring consistency across Azure environments while minimizing operational disruptions.",
+"Optimized AKS clusters with Helm charts for high availability and scalability, enabling zero-downtime microservices deployments.",
+"Implemented comprehensive monitoring with Azure Monitor, Log Analytics, and Application Insights for proactive issue detection and system reliability.",
+"Enhanced security through RBAC, Azure AD, Key Vault, and Defender for Cloud, maintaining compliance and data protection standards"
     ],
   },
   {
@@ -135,12 +134,13 @@ export const experience = [
     period: "Jan 2021 – Sep 2023",
     location: "India",
     highlights: [
-      "Managed cloud infrastructure with Terraform, ARM Templates, and Bicep at scale",
-      "Configured AKS clusters for microservices with Helm charts ensuring high availability",
-      "Implemented RBAC policies, Azure AD authentication, and Key Vault secrets management",
-      "Engineered Docker containerization and Kubernetes deployments for multi-cloud environments",
-      "Reduced operational costs via Azure Cost Management and right-sizing strategies",
-      "Mentored junior DevOps engineers in Azure DevOps, Terraform, and Kubernetes best practices",
+      "Built automated multi-cloud CI/CD pipelines with Azure DevOps, GitHub Actions, and Jenkins for AKS/EKS deployments, integrating Terraform for IaC and SonarQube for security scanning.",
+
+"Automated infrastructure scaling and disaster recovery using Azure Scale Sets, Site Recovery, and Cost Management, reducing operational costs and downtime.",
+
+"Collaborated on DevSecOps practices, embedding security in pipelines and mentoring junior engineers on Azure, Terraform, and Kubernetes best practices.",
+
+"Performed performance tuning and incident management for Azure-hosted apps, boosting efficiency and responsiveness while managing cloud expenses via right-sizing."
     ],
   },
 ];

@@ -48,3 +48,31 @@ export default tseslint.config({
   },
 })
 ```
+
+## CI/CD (GitHub Actions → Firebase Hosting)
+
+This repo includes:
+
+- `.github/workflows/ci.yml`: runs `npm ci`, `npm run lint`, `npm run build` on PRs and `main`
+- `.github/workflows/firebase-hosting.yml`: deploys previews for PRs and deploys to **live** on `main`
+
+### One-time Firebase setup
+
+1. Create a Firebase project (or pick an existing one) in the Firebase console.
+2. Enable **Hosting** for that project.
+3. Update `.firebaserc` and replace `REPLACE_ME_FIREBASE_PROJECT_ID` with your Firebase **Project ID**.
+
+### GitHub Secrets required
+
+Add these repository secrets in GitHub:
+
+- `FIREBASE_PROJECT_ID`: your Firebase **Project ID** (same value as in `.firebaserc`)
+- `FIREBASE_SERVICE_ACCOUNT`: a service account JSON for Firebase deploys
+
+To create the service account JSON:
+
+1. In Google Cloud Console → IAM & Admin → Service Accounts: create a service account.
+2. Grant it the role `Firebase Hosting Admin` (and if prompted, also `Service Account User`).
+3. Create a JSON key and copy the entire JSON into the `FIREBASE_SERVICE_ACCOUNT` GitHub secret.
+
+After that, merges to `main` will deploy to Firebase Hosting automatically.

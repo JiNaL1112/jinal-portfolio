@@ -15,7 +15,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 import HomelabPage from './pages/HomelabPage';
-import ArticlesPage from './pages/ArticlesPage';  // ← NEW
+import ArticlesPage from './pages/Articlespage';
 
 function Portfolio() {
   return (
