@@ -63,7 +63,7 @@ export default function Contact() {
         <div className={styles.quickStrip}>
           <div className={styles.quickLeft}>
             <span className={styles.quickLabel}>// ready_to_connect</span>
-            <span className={styles.quickText}>Ottawa, ON · Available for DevOps &amp; Platform Engineering roles</span>
+            <span className={styles.quickText}>Kitchener, ON · Available for DevOps &amp; Platform Engineering roles</span>
           </div>
           <div className={styles.quickRight}>
             <a href={`mailto:${profile.email}`} className={styles.quickEmail}>

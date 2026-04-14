@@ -44,7 +44,7 @@ export default function Hero() {
             <div className={styles.metaStrip}>
               <span className={styles.metaItem}>
                 <LocationIcon />
-                Ottawa, ON · Canada
+                Kitchener, ON · Canada
               </span>
               <span className={styles.metaSep}>·</span>
               <span className={styles.metaAvail}>

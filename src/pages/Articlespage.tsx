@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMediumArticles } from '../hooks/useMediumArticles';
 import { articles as staticArticles } from '../data/articles';
-import styles from './ArticlesPage.module.css';
+import styles from './Articlespage.module.css';
 
 function ArticleIcon({ tags }: { tags: string[] }) {
   const tag = tags[0]?.toLowerCase() ?? '';
