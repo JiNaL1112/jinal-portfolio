@@ -54,7 +54,7 @@ export const certifications = [
     icon: "⎈",
     color: "#E8B84B",
     credlyUrl: "https://www.credly.com/badges/062bf268-9526-4f8a-8570-d9799ea598f9/public_url",
-    imageUrl: "../public/badges/cka.png",
+    imageUrl: "/badges/cka.png",
   },
   {
     name: "CKAD",
@@ -63,7 +63,7 @@ export const certifications = [
     icon: "⎈",
     color: "#FF8C42",
     credlyUrl: "https://www.credly.com/badges/27a33569-6001-403d-a34c-bd1e4ecaa23f/public_url",
-    imageUrl: "../public/badges/ckad.png",
+    imageUrl: "/badges/ckad.png",
   },
   {
     name: "KCNA",
@@ -72,7 +72,7 @@ export const certifications = [
     icon: "☁",
     color: "#E8B84B",
     credlyUrl: "https://www.credly.com/badges/ca19329d-9468-4314-bc72-276807171247/public_url",
-    imageUrl: "../public/badges/kcna.png",
+    imageUrl: "/badges/kcna.png",
   },
   {
     name: "TF-003",
@@ -81,7 +81,7 @@ export const certifications = [
     icon: "◈",
     color: "#A07E2E",
     credlyUrl: "https://www.credly.com/badges/8eebc1e5-f9b2-4840-a448-41778b353acb/public_url",
-    imageUrl: "../public/badges/terraform.png",
+    imageUrl: "/badges/terraform.png",
   },
   {
     name: "AZ-400",
@@ -90,7 +90,7 @@ export const certifications = [
     icon: "△",
     color: "#0078D4",
     credlyUrl: "https://www.credly.com/users/jinal-patel.e1e1a999",
-    imageUrl: "../public/badges/az-400.png",
+    imageUrl: "/badges/az-400.png",
   },
   {
     name: "WES",
@@ -99,7 +99,7 @@ export const certifications = [
     icon: "🎓",
     color: "#FF8C42",
     credlyUrl: "https://www.credly.com/badges/430a1d7b-75f7-4aff-971e-c314ab3da225/public_url",
-    imageUrl: "../public/badges/wes.png",
+    imageUrl: "/badges/wes.png",
   },
 ];
 
