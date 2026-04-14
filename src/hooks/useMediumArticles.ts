@@ -11,6 +11,22 @@ export interface MediumArticle {
   featured: boolean;
 }
 
+interface Rss2JsonItem {
+  title?: string;
+  pubDate?: string;
+  link?: string;
+  categories?: string[];
+  thumbnail?: string;
+  content?: string;
+  description?: string;
+}
+
+interface Rss2JsonResponse {
+  status?: string;
+  message?: string;
+  items?: Rss2JsonItem[];
+}
+
 const FEED_URL =
   'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@jinalpatel11121999';
 
@@ -40,14 +56,14 @@ export function useMediumArticles() {
         const res = await fetch(FEED_URL);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
-        const data = await res.json();
+        const data = (await res.json()) as Rss2JsonResponse;
 
         if (data.status !== 'ok') {
           throw new Error(data.message ?? 'Feed error');
         }
 
         const parsed: MediumArticle[] = (data.items ?? []).map(
-          (item: any, i: number) => {
+          (item: Rss2JsonItem, i: number) => {
             const fullTitle: string = item.title ?? '';
             const colonIdx = fullTitle.indexOf(':');
             const title =
