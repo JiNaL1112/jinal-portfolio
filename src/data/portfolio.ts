@@ -147,6 +147,15 @@ export const experience = [
 
 export const projects = [
   {
+  title: "Health Insurance Claims Fraud Detection",
+  description: "End-to-end MLOps pipeline for detecting fraudulent health insurance claims using Isolation Forest. Features experiment tracking with MLflow, model serving via BentoML, a Flask web UI for CSV uploads, and full CI/CD with GitHub Actions, Docker Compose, Helm, and ArgoCD GitOps.",
+  tags: ["Python", "MLflow", "BentoML", "Flask", "Scikit-learn", "Docker", "Kubernetes", "Helm", "ArgoCD", "GitHub Actions", "DVC"],
+  github: "https://github.com/JiNaL1112/Automatic_insurance_Claim_Reviews",
+  article: "https://medium.com/@jinalpatel11121999/from-script-to-system-productionising-a-health-insurance-fraud-detector-with-docker-github-c29126b58cf6",
+  type: "MLOps",
+  image: "https://github.com/JiNaL1112/Automatic_insurance_Claim_Reviews/blob/main/Image/v1/app_1.png?raw=true",
+},
+  {
     title: "Azure Infrastructure with Terraform",
     description: "Scalable Azure infrastructure featuring VMSS, Load Balancer, and Autoscaling built with Terraform. Production-grade IaC with modular design patterns.",
     tags: ["Terraform", "Azure", "VMSS", "Load Balancer", "IaC"],
